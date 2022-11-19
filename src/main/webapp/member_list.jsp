@@ -43,12 +43,14 @@
     MemberDAO memberDAO = new MemberDAO();
     List<MemberVO> list = memberDAO.getMemberList();
     request.setAttribute("list",list);
+
 %>
 <table id="list" width="90%">
     <tr>
         <th>Id</th>
         <th>User Id</th>
         <th>Username</th>
+        <th>Photo</th>
         <th>Email</th>
         <th>Regdate</th>
         <th>Edit</th>
@@ -59,6 +61,7 @@
             <td>${member.getSid()}</td>
             <td>${member.getUserid()}</td>
             <td>${member.getUsername()}</td>
+            <td><c:if test="${member.getPhoto() ne ''}"><br /><img src="${pageContext.request.contextPath}/upload/${member.getPhoto()}" class="photo"></c:if></td>
             <td>${member.getEmail()}</td>
             <td>${member.getRegdate()}</td>
             <td><a href="edit_member_form.jsp?id=${member.getSid()}">Edit</a></td>

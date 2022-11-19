@@ -31,5 +31,11 @@
 
 %>
 
+폼에서 전송된 원래 파일명: <%=multipartRequest.getOriginalFileName("photo")%><br />
+업로드한 파일의 경로 : ${pageContext.request.contextPath }/upload/<%=filename%><br />
+물리적인 저장 경로 : <%=realPath%><br />
+<img src="${pageContext.request.contextPath }/upload/<%=filename%>">
+
+파일명: <%=filename%>
 </body>
 </html>

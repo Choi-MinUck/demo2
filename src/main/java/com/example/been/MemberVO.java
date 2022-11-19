@@ -1,5 +1,7 @@
 package com.example.been;
 
+import com.example.util.JDBCUtil;
+
 import java.util.Date;
 
 public class MemberVO {
@@ -84,5 +86,4 @@ public class MemberVO {
     private String photo;
     private String detail;
     private Date regdate;
-
 }

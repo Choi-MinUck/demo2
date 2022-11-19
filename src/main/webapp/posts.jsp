@@ -68,5 +68,6 @@
 </table>
 <br/><a href="addpostform.jsp">Add New Post</a>
 <br/><a href="member_list.jsp">See Member List</a>
+<br/><a href="fileform.jsp">Upload File</a>
 </body>
 </html>
